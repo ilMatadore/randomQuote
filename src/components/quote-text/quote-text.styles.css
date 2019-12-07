@@ -1,0 +1,11 @@
+#text {
+    display: inline-block;
+    text-align: center;
+    height: 50%;
+    margin: auto;
+    font-family: 'Arimo', sans-serif;
+    color: midnightblue;
+    font-weight: 600;
+    font-size: 35px;
+
+}

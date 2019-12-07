@@ -1,0 +1,13 @@
+#author {
+    font-size: 16px;
+    margin: auto;
+    font-style: italic;
+    font-family: 'Arimo', sans-serif;
+    color: midnightblue;
+    padding-top: 15px;
+
+}
+
+#author > p {
+    text-align: right;
+}
