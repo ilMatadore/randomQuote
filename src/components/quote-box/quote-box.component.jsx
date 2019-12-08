@@ -32,7 +32,7 @@ class QuoteBox extends React.Component {
                 <QuoteAuthor author={this.state.author}/>
                 <div id="buttons">
                     <Button id="new-quote" text="New Quote" onClick={this.newQuote}/>
-                    <Tweet id="tweet-quote" text="Tweet" />
+                    <Tweet id="tweet-quote" text="Tweet" quote={this.state.quote} author={this.state.author}/>
                 </div>
             </div>
         )
