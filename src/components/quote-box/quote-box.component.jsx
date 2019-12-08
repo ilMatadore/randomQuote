@@ -34,7 +34,7 @@ class QuoteBox extends React.Component {
     }
     render() {
         return(
-            <body style={{backgroundColor: this.state.color, transition: ".7s"}}>
+            <body style={{backgroundColor: this.state.color, transition: ".7s", height: "100vh"}}>
             <div id="quote-box">
                 <QuoteText quote={this.state.quote} color={this.state.color}/>
                 <QuoteAuthor author={this.state.author} color={this.state.color}/>
