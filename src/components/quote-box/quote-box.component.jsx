@@ -12,7 +12,8 @@ class QuoteBox extends React.Component {
         super(props)
         this.state = {
             quote: '',
-            author: ''
+            author: '',
+            color: ''
         }
     }
 
@@ -20,21 +21,29 @@ class QuoteBox extends React.Component {
         this.newQuote()
     }
 
+    random_rgba = () => {
+        var o = Math.round, r = Math.random, s = 255;
+        return 'rgb(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ')';
+    }
+
     newQuote = () => {
         fetch('https://programming-quotes-api.herokuapp.com/quotes/random')
-        .then(response => response.json()).then(quote => this.setState({ quote: quote.en, author: quote.author}))
+        .then(response => response.json()).then(quote => this.setState({ quote: quote.en, author: quote.author }));
+        this.setState({color: this.random_rgba()});
         
     }
     render() {
         return(
+            <body style={{backgroundColor: this.state.color, transition: ".7s"}}>
             <div id="quote-box">
-                <QuoteText quote={this.state.quote}/>
-                <QuoteAuthor author={this.state.author}/>
+                <QuoteText quote={this.state.quote} color={this.state.color}/>
+                <QuoteAuthor author={this.state.author} color={this.state.color}/>
                 <div id="buttons">
-                    <Button id="new-quote" text="New Quote" onClick={this.newQuote}/>
-                    <Tweet id="tweet-quote" text="Tweet" quote={this.state.quote} author={this.state.author}/>
+                    <Button id="new-quote" text="New Quote" onClick={this.newQuote} color={this.state.color}/>
+                    <Tweet id="tweet-quote" text="Tweet" quote={this.state.quote} author={this.state.author} color={this.state.color}/>
                 </div>
             </div>
+            </body>
         )
     }
 }

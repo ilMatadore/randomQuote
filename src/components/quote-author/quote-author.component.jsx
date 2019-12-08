@@ -4,7 +4,7 @@ import './quote-author.styles.css';
 
 const QuoteAuthor = (props) => {
     return (
-        <div id="author">
+        <div id="author" style={{color: props.color, transition: "1s"}}>
             <p>- {props.author}</p>
         </div>
     )

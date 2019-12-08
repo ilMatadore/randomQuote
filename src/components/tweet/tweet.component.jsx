@@ -12,7 +12,8 @@ const Tweet = (props) => {
         <a id={props.id}
         target="_blank"
         rel="noopener noreferrer"
-        href={tweet}><i className="fab fa-twitter-square"></i></a>
+        href={tweet}><i className="fab fa-twitter-square"
+        style={{color: props.color, transition: ".7s"}}></i></a>
         
     )
 }

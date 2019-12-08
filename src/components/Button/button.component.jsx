@@ -4,7 +4,7 @@ import './newQuote.styles.css';
 
 const Button = (props) => {
     return (
-        <button id={props.id} onClick={props.onClick}>{props.text}</button>
+        <button id={props.id} onClick={props.onClick} style={{backgroundColor: props.color, transition: ".7s"}}>{props.text}</button>
     )
 }
 

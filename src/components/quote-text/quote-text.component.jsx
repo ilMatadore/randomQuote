@@ -4,7 +4,7 @@ import './quote-text.styles.css';
 
 const QuoteText = props => {
     return (
-        <div id="text">
+        <div id="text" style={{color: props.color, transition: ".7s"}}>
             "{props.quote}"
         </div>
     )
