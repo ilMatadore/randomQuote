@@ -1,12 +1,19 @@
 #tweet-quote {
-    float: left;
-    text-decoration-style: none;
-    list-style: none;
-    text-decoration: none;
-    color: midnightblue;
-    
+  float: left;
+  text-decoration-style: none;
+  list-style: none;
+  text-decoration: none;
+  color: midnightblue;
 }
 
 i {
-    font-size: 50px;
+  font-size: 50px;
+}
+
+#tweet-quote:hover {
+  filter: brightness(110%);
+}
+
+#tweet-quote:active {
+  transform: translate(0, 0.2rem);
 }

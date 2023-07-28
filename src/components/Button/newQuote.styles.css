@@ -1,15 +1,19 @@
 #new-quote {
-    float: right;
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-family: Calibri;
-    padding: 13px;
-    border-radius: 15px;
-    cursor: pointer;
-    font-family: 'Arimo', sans-serif;
-    outline: none;
+  float: right;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-family: Calibri;
+  padding: 13px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: "Arimo", sans-serif;
+  outline: none;
 }
- #new-quote:hover {
-    background-color: darkblue;
- }
+#new-quote:hover {
+  filter: brightness(110%);
+}
+
+#new-quote:active {
+  transform: translate(0, 0.4rem);
+}
